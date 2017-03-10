@@ -16,7 +16,8 @@ public class PigComputerPlayer extends GameComputerPlayer {
     /**
      * ctor does nothing extra
      */
-    public PigComputerPlayer(String name) {
+    public PigComputerPlayer(String name)
+    {
         super(name);
     }
 
@@ -27,8 +28,14 @@ public class PigComputerPlayer extends GameComputerPlayer {
      * 		the information (presumably containing the game's state)
      */
     @Override
-    protected void receiveInfo(GameInfo info) {
-        // TODO  You will implement this method
+    protected void receiveInfo(GameInfo info)
+    {
+        if (!(info instanceof PigGameState))
+        {
+            return;
+        }
+
+
     }//receiveInfo
 
 }

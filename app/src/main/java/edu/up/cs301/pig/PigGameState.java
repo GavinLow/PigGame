@@ -15,7 +15,7 @@ public class PigGameState extends GameState
     private int dieValue;
 
     //Constructor
-    public void PigGameState()
+    public PigGameState()
     {
         turn = 0;
         p0Score = 0;
@@ -25,7 +25,7 @@ public class PigGameState extends GameState
     }
 
     //Copy Constructor
-    public void PigGameState(PigGameState p)
+    public PigGameState(PigGameState p)
     {
         turn = p.turn;
         p0Score = p.p0Score;
