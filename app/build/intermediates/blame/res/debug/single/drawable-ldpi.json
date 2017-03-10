@@ -1,10 +1,6 @@
 [
     {
-        "merged": "P:\\CS371\\PigGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_launcher.png",
-        "source": "P:\\CS371\\PigGame\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher.png"
-    },
-    {
-        "merged": "P:\\Users\\gavinlow\\Downloads\\CS371PigGameStarter-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi\\ic_launcher.png",
-        "source": "P:\\Users\\gavinlow\\Downloads\\CS371PigGameStarter-master\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher.png"
+        "merged": "/Users/gavinlow/AndroidStudioProjects/PigGame/app/build/intermediates/res/merged/debug/drawable-ldpi/ic_launcher.png",
+        "source": "/Users/gavinlow/AndroidStudioProjects/PigGame/app/src/main/res/drawable-ldpi/ic_launcher.png"
     }
 ]
