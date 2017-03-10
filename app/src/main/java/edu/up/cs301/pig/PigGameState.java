@@ -52,7 +52,7 @@ public class PigGameState extends GameState
 
     public int getRunningTotal()
     {
-        return this.runningTotal
+        return this.runningTotal;
     }
 
     public int getDieValue()
