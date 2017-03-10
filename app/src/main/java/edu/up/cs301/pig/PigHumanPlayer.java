@@ -76,6 +76,8 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
             this.state = (PigGameState)info;
         }
 
+
+
     }//receiveInfo
 
     /**
