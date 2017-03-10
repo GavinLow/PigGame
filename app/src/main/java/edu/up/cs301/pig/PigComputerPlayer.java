@@ -13,6 +13,7 @@ import edu.up.cs301.game.util.Tickable;
  */
 public class PigComputerPlayer extends GameComputerPlayer {
 
+    private PigGameState savedState;
     /**
      * ctor does nothing extra
      */
@@ -36,6 +37,9 @@ public class PigComputerPlayer extends GameComputerPlayer {
         {
             return;
         }
+
+        savedState = (PigGameState)info;
+
 
 
         savedState = (PigGameState)info;
