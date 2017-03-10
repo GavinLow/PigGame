@@ -100,16 +100,8 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
             dieImageButton.setImageResource(R.drawable.face6);
         }
 
-        updatedisplay();
-
     }//receiveInfo
 
-    protected void updatedisplay()
-    {
-        oppScoreTextView.setText(state.getP1Score());
-        playerScoreTextView.setText(state.getP0Score());
-        turnTotalTextView.setText(state.getRunningTotal());
-    }
 
     /**
      * this method gets called when the user clicks the die or hold button. It

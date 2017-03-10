@@ -30,15 +30,15 @@ public class PigLocalGame extends LocalGame {
     @Override
     protected boolean canMove(int playerIdx)
     {
-        if (playerIdx == state.getTurn())
-        {
-            return true;
-        }
-        else
-        {
+        if (playerIdx < 0 || playerIdx > 1) {
+            // if our player-number is out of range, return false
             return false;
         }
-
+        else {
+            // player can move if it's their turn, or if the middle deck is non-empty
+            // so they can slap
+            return playerIdx == state.getTurn() ;
+        }
     }
 
     /**
@@ -114,7 +114,7 @@ public class PigLocalGame extends LocalGame {
             return;
         }
         PigGameState stateForPlayer = new PigGameState(state);
-        p.sendInfo(stateForPlayer);
+        p.sendInfo((GameState)stateForPlayer);
 
     }//sendUpdatedSate
 
