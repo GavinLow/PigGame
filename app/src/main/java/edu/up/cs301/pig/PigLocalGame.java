@@ -55,6 +55,7 @@ public class PigLocalGame extends LocalGame {
         }
 
 
+
         if(action instanceof  PigRollAction)
         {
             int rand = (int)((6*Math.random())+1);
@@ -63,7 +64,7 @@ public class PigLocalGame extends LocalGame {
             {
                 state.setRunningTotal(state.getRunningTotal()+state.getDieValue());
             }
-            else
+            else if
             {
                 state.setRunningTotal(0);
                 if(state.getTurn()==0)

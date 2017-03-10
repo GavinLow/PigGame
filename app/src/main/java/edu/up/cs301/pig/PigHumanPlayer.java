@@ -32,7 +32,7 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
     private TextView    messageTextView     = null;
     private ImageButton dieImageButton      = null;
     private Button      holdButton          = null;
-
+    protected PigGameState state;
     // the android activity that we are running
     private GameMainActivity myActivity;
 
@@ -61,7 +61,7 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
      */
     @Override
     public void receiveInfo(GameInfo info) {
-        //TODO You will implement this method to receive state objects from the game
+        this.state = (PigGameState)info;
     }//receiveInfo
 
     /**
