@@ -6,19 +6,15 @@ import edu.up.cs301.game.actionMsg.GameAction;
 /**
  * Created by nguyenv19 on 3/9/2017.
  */
-public class PigHoldAction extends GameAction
+public class PigGameMoveAction extends GameAction
 {
+
     /**
      * constructor for GameAction
      *
      * @param player the player who created the action
      */
-    public PigHoldAction(GamePlayer player)
-    {
+    public PigGameMoveAction(GamePlayer player) {
         super(player);
-    }
-    public boolean isHold()
-    {
-        return true;
     }
 }
