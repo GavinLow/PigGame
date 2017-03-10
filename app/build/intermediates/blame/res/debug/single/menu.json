@@ -1,6 +1,10 @@
 [
     {
-        "merged": "/Users/gavinlow/Downloads/CS371PigGameStarter-master/app/build/intermediates/res/merged/debug/menu/game_main.xml",
-        "source": "/Users/gavinlow/Downloads/CS371PigGameStarter-master/app/src/main/res/menu/game_main.xml"
+        "merged": "P:\\Users\\gavinlow\\Downloads\\CS371PigGameStarter-master\\app\\build\\intermediates\\res\\merged\\debug\\menu\\game_main.xml",
+        "source": "P:\\Users\\gavinlow\\Downloads\\CS371PigGameStarter-master\\app\\src\\main\\res\\menu\\game_main.xml"
+    },
+    {
+        "merged": "P:\\CS371\\PigGame\\app\\build\\intermediates\\res\\merged\\debug\\menu\\game_main.xml",
+        "source": "P:\\CS371\\PigGame\\app\\src\\main\\res\\menu\\game_main.xml"
     }
 ]
