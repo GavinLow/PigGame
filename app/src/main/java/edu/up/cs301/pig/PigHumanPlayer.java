@@ -73,7 +73,33 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
             // going, there is no need to explicitly display anything. That will happen
             // at the next animation-tick, which should occur within 1/20 of a second
 
+
         this.state = (PigGameState)info;
+        if(state.getDieValue()== 1)
+        {
+            dieImageButton.setImageResource(R.drawable.face1);
+        }
+        else if(state.getDieValue()== 2)
+        {
+            dieImageButton.setImageResource(R.drawable.face2);
+        }
+        else if(state.getDieValue()== 3)
+        {
+            dieImageButton.setImageResource(R.drawable.face3);
+        }
+        else if(state.getDieValue()== 4)
+        {
+            dieImageButton.setImageResource(R.drawable.face4);
+        }
+        else if(state.getDieValue()== 5)
+        {
+            dieImageButton.setImageResource(R.drawable.face5);
+        }
+        else if(state.getDieValue()== 6)
+        {
+            dieImageButton.setImageResource(R.drawable.face6);
+        }
+
         updatedisplay();
 
     }//receiveInfo
