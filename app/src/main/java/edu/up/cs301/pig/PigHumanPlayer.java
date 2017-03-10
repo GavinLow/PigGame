@@ -66,7 +66,7 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
         if (!(info instanceof PigGameState))
         {
             // otherwise, if it's not a game-state message, ignore
-            flash(0xFFFF4D00,10);
+            flash(0xFFFF4D00,100);
             return;
         }
         else {
