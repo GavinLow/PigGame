@@ -69,16 +69,21 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
             flash(0xFFFF4D00,100);
             return;
         }
-        else {
             // it's a game-state object: update the state. Since we have an animation
             // going, there is no need to explicitly display anything. That will happen
             // at the next animation-tick, which should occur within 1/20 of a second
-            this.state = (PigGameState)info;
-        }
 
-
+        this.state = (PigGameState)info;
+        updatedisplay();
 
     }//receiveInfo
+
+    protected void updatedisplay()
+    {
+        oppScoreTextView.setText(state.getP1Score());
+        playerScoreTextView.setText(state.getP0Score());
+        turnTotalTextView.setText(state.getRunningTotal());
+    }
 
     /**
      * this method gets called when the user clicks the die or hold button. It

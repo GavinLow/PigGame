@@ -64,7 +64,7 @@ public class PigLocalGame extends LocalGame {
             {
                 state.setRunningTotal(state.getRunningTotal()+state.getDieValue());
             }
-            else if
+            else
             {
                 state.setRunningTotal(0);
                 if(state.getTurn()==0)
