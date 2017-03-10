@@ -3,6 +3,7 @@ package edu.up.cs301.pig;
 import edu.up.cs301.game.GameHumanPlayer;
 import edu.up.cs301.game.GameMainActivity;
 import edu.up.cs301.game.R;
+import edu.up.cs301.game.actionMsg.GameAction;
 import edu.up.cs301.game.infoMsg.GameInfo;
 
 import android.graphics.Color;
@@ -84,8 +85,23 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
      * @param button
      * 		the button that was clicked
      */
-    public void onClick(View button) {
-        //TODO  You will implement this method to send appropriate action objects to the game
+    public void onClick(View button)
+    {
+        if (game == null)
+        {
+            return;
+        }
+        GameAction action = null;
+        if (button.getId() == R.id.holdButton)
+        {
+            action = new PigHoldAction(this);
+        }
+        else if (button.getId() == R.id.dieButton)
+        {
+            action = new PigRollAction(this);
+        }
+
+        game.sendAction(action);
     }// onClick
 
     /**
