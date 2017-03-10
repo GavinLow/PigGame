@@ -75,6 +75,16 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
 
 
         this.state = (PigGameState)info;
+
+        updatedisplay();
+
+    }//receiveInfo
+
+    protected void updatedisplay()
+    {
+        oppScoreTextView.setText(state.getP1Score());
+        playerScoreTextView.setText(state.getP0Score());
+        turnTotalTextView.setText(state.getRunningTotal());
         if(state.getDieValue()== 1)
         {
             dieImageButton.setImageResource(R.drawable.face1);
@@ -100,15 +110,6 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
             dieImageButton.setImageResource(R.drawable.face6);
         }
 
-        updatedisplay();
-
-    }//receiveInfo
-
-    protected void updatedisplay()
-    {
-        oppScoreTextView.setText(state.getP1Score());
-        playerScoreTextView.setText(state.getP0Score());
-        turnTotalTextView.setText(state.getRunningTotal());
     }
 
     /**
