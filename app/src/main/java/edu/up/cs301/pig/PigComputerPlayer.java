@@ -16,6 +16,8 @@ public class PigComputerPlayer extends GameComputerPlayer {
     /**
      * ctor does nothing extra
      */
+    private PigGameState savedState;
+
     public PigComputerPlayer(String name)
     {
         super(name);
@@ -33,6 +35,22 @@ public class PigComputerPlayer extends GameComputerPlayer {
         if (!(info instanceof PigGameState))
         {
             return;
+        }
+
+
+        savedState = (PigGameState)info;
+
+
+        double rand = Math.random();
+        if (rand>.50)
+        {
+            sleep((int)(2000*Math.random()));
+            game.sendAction(new PigHoldAction(this));
+        }
+        else
+        {
+            sleep((int)(2000*Math.random()));
+            game.sendAction(new PigRollAction(this));
         }
 
 
