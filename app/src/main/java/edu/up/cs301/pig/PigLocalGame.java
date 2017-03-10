@@ -54,6 +54,7 @@ public class PigLocalGame extends LocalGame {
             return false;
         }
 
+
         if(action instanceof  PigRollAction)
         {
             int rand = (int)((6*Math.random())+1);
@@ -65,6 +66,15 @@ public class PigLocalGame extends LocalGame {
             else
             {
                 state.setRunningTotal(0);
+                if(state.getTurn()==0)
+                {
+                    state.setTurn(1);
+                }
+                else
+                {
+                    state.setTurn(0);
+                }
+
             }
             return true;
         }
@@ -72,12 +82,24 @@ public class PigLocalGame extends LocalGame {
 
         if(action instanceof  PigHoldAction)
         {
-            state.setP0Score();
+            state.setRunningTotal(0);
+            if(state.getTurn()== 0)
+            {
+                state.setP0Score(state.getRunningTotal()+state.getP0Score());
+                state.setTurn(1);
+            }
+            else
+            {
+                state.setP1Score(state.getRunningTotal()+state.getP1Score());
+                state.setTurn(0);
+            }
+
+            return  true;
         }
 
 
 
-        return false;
+        return true;
     }//makeMove
 
     /**
