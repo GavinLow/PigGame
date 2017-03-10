@@ -17,7 +17,6 @@ public class PigComputerPlayer extends GameComputerPlayer {
     /**
      * ctor does nothing extra
      */
-    private PigGameState savedState;
 
     public PigComputerPlayer(String name)
     {
@@ -39,11 +38,6 @@ public class PigComputerPlayer extends GameComputerPlayer {
         }
 
         savedState = (PigGameState)info;
-
-
-
-        savedState = (PigGameState)info;
-
 
         double rand = Math.random();
         if (rand>.50)
