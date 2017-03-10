@@ -21,7 +21,7 @@ public class PigLocalGame extends LocalGame {
      */
     public PigLocalGame()
     {
-         state = new PigGameState();
+        state = new PigGameState();
     }
 
     /**
@@ -49,6 +49,34 @@ public class PigLocalGame extends LocalGame {
     @Override
     protected boolean makeMove(GameAction action)
     {
+        if(!(action instanceof PigRollAction) || !(action instanceof PigHoldAction))
+        {
+            return false;
+        }
+
+        if(action instanceof  PigRollAction)
+        {
+            int rand = (int)((6*Math.random())+1);
+            state.setDieValue(rand);
+            if(state.getDieValue()>1)
+            {
+                state.setRunningTotal(state.getRunningTotal()+state.getDieValue());
+            }
+            else
+            {
+                state.setRunningTotal(0);
+            }
+            return true;
+        }
+
+
+        if(action instanceof  PigHoldAction)
+        {
+            state.setP0Score();
+        }
+
+
+
         return false;
     }//makeMove
 
