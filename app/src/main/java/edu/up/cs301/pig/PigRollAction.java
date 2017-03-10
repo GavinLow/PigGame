@@ -15,4 +15,8 @@ public class PigRollAction extends GameAction {
     public PigRollAction(GamePlayer player) {
         super(player);
     }
+    public boolean isRoll()
+    {
+        return true;
+    }
 }

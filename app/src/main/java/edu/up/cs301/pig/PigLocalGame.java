@@ -54,8 +54,10 @@ public class PigLocalGame extends LocalGame {
             return false;
         }
 
-
-
+        PigRollAction RA = (PigRollAction) action;
+        PigHoldAction HA = (PigHoldAction) action;
+        int playerIdx = getPlayerIdx(RA.getPlayer());
+        //int player = getPlayerIdx(HA.getPlayer());
         if(action instanceof  PigRollAction)
         {
             int rand = (int)((6*Math.random())+1);
