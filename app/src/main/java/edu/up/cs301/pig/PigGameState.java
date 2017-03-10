@@ -14,6 +14,7 @@ public class PigGameState extends GameState
     private int runningTotal;
     private int dieValue;
 
+
     //Constructor
     public PigGameState()
     {
@@ -31,7 +32,6 @@ public class PigGameState extends GameState
         p0Score = p.p0Score;
         p1Score = p.p1Score;
         runningTotal = p.runningTotal;
-        dieValue = p.dieValue;
     }
 
     //Getter Methods
