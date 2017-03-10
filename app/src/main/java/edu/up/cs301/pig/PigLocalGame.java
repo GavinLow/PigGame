@@ -18,9 +18,10 @@ public class PigLocalGame extends LocalGame {
     /**
      * This ctor creates a new game state
      */
+    PigGameState state;
     public PigLocalGame()
     {
-        new PigGameState();
+        state = new PigGameState();
     }
 
     /**
@@ -38,10 +39,38 @@ public class PigLocalGame extends LocalGame {
      * @return true if the action was taken or false if the action was invalid/illegal.
      */
     @Override
-    protected boolean makeMove(GameAction action) {
-        //TODO  You will implement this method
+    protected boolean makeMove(GameAction action)
+    {
+        if(!(action instanceof PigRollAction) || !(action instanceof PigHoldAction))
+        {
+            return false;
+        }
+
+        if(action instanceof  PigRollAction)
+        {
+            int rand = (int)((6*Math.random())+1);
+            state.setDieValue(rand);
+            if(state.getDieValue()>1)
+            {
+                state.setRunningTotal(state.getRunningTotal()+state.getDieValue());
+            }
+            else
+            {
+                state.setRunningTotal(0);
+            }
+            return true;
+        }
+
+
+        if(action instanceof  PigHoldAction)
+        {
+            state.setP0Score();
+        }
+
+
+
         return false;
-    }//makeMove
+     }//makeMove
 
     /**
      * send the updated state to a given player
