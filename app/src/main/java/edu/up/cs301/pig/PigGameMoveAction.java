@@ -17,4 +17,12 @@ public class PigGameMoveAction extends GameAction
     public PigGameMoveAction(GamePlayer player) {
         super(player);
     }
+    public boolean isHold()
+    {
+        return false;
+    }
+    public  boolean isRoll()
+    {
+        return false;
+    }
 }
